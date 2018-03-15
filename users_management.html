@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iNube</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
+    <!--rel="stylesheet">-->
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+</head>
+<body>
+<div id="wrapper">
+
+    <div id="headerWrapper">
+        <div id="title">
+            <a href="">iNube</a>
+        </div>
+
+        <div id="navBar">
+            <div class="navBarItem"><a href="">Enlace1</a></div>
+            <div class="navBarItem"><a href="">Enlace2</a></div>
+        </div>
+    </div>
+
+
+    <div id="contentWrapper">
+
+        <div class="mainWrapper">
+            <!--AlertCode-->
+            <div class="bodyWrapper">
+                <span class="newTitle">Create new user </span>
+
+                <form action="" method="post">
+
+                    <table class="users">
+                        <tr>
+                            <th>Name:</th>
+                            <td><input name="name" type="text" class="styledInput"/></td>
+                        </tr>
+                        <tr>
+                            <th>Username:</th>
+                            <td><input name="username" type="text" class="styledInput"/></td>
+                        </tr>
+                        <tr>
+                            <th>Admin:</th>
+                            <td><input name="admin" type="checkbox"/></td>
+                        </tr>
+                        <tr>
+                            <th>Password:</th>
+                            <td><input name="password" type="password" class="styledInput"/></td>
+                        </tr>
+
+                    </table>
+                    <button id="newButton" action="submit">Create</button>
+
+                </form>
+
+                <span class="newTitle">Edit existing user </span>
+
+                <table class="users">
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Admin</th>
+                        <th>CreatedAt</th>
+                        <th>Delete user</th>
+                    </tr>
+
+                    <tr>
+                        <td>Pepito P</td>
+                        <td>pp</td>
+                        <td>Yes</td>
+                        <td>Tomorrow</td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
