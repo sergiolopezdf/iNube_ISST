@@ -5,6 +5,9 @@ body {
     font-family: 'Catamaran', sans-serif;
 }
 
+canvas {
+    font-family: 'Catamaran', sans-serif;
+}
 div#wrapper {
     width: 100%;
     margin-left: 0px;
@@ -24,7 +27,7 @@ div#contentWrapper {
 
 div.mainWrapper {
     margin: 0px;
-    flex: 1;
+    flex: 5;
     padding-top: 2vh;
 
 }
@@ -46,6 +49,133 @@ div.bodyWrapper {
     padding: 1vh;
     background: rgba(132,235,59,0.73);
     border-radius: 5px;
+}
+
+/*************************************/
+/*Graphs*/
+/*************************************/
+
+div.topGraphs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+div#productos {
+    display: inline-block;
+    width: 45%;
+    height: 300px;
+}
+
+div#ocupacion {
+    display: inline-block;
+    width: 45%;
+    height: 300px;
+    margin-left: 15px;
+}
+div#ingresos {
+    margin-top:10vh;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+}
+
+/*div#bottomGraph {
+    margin-top: 50%;
+    display: block;
+    width: 100%;
+    justify-content: center;
+}*/
+
+/*************************************/
+/*datepicker*/
+/*************************************/
+
+.ui-datepicker {
+    width: 216px;
+    height: auto;
+    margin: 5px auto 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 15px;
+    background: #FFFFFF;
+}
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+.ui-datepicker table {
+    width: 100%;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+}
+
+
+.ui-datepicker-prev {
+    float: left;
+    margin-top: 3px;
+
+}
+
+.ui-datepicker-next {
+    float: right;
+    margin-top: 3px;
+}
+
+
+table.filter {
+    margin-bottom: 15px;
+}
+tr {
+    font-size: 14px;
+    padding-bottom: 25px;
+}
+
+td {
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+td input, td select {
+    outline: none;
+    resize: none;
+    border: none;
+    background: #FFFFFF;
+}
+td input{
+    width: 120px;
+}
+
+#myselfContact {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+}
+#contactName {
+    font-size: 13px;
+    flex: 10;
+}
+
+#contactStatus {
+    flex: 1;
+}
+
+a#logout {
+    color: #000000;
+
+}
+
+a#logout:hover {
+    color: rgba(82, 159, 255, 0.98);
+
+}
+
+a#logout i {
+    font-size: 15px;
 }
 
 /*************************************/
@@ -113,6 +243,16 @@ table.users {
 }
 
 
+
+
+div#sideWrapper {
+    height: 100vh;
+    flex: 1;
+    margin: 0px;
+    padding: 0.7%;
+    background-color: rgba(227, 225, 230, 0.49);
+
+}
 
 
 /*************************************/

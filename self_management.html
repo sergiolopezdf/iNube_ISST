@@ -36,11 +36,11 @@
             <!--AlertCode-->
             <div class="bodyWrapper">
 
-                <span class="newTitle">Personal data management</span>
+                <span class="newTitle">Gestión de la información personal</span>
 
                 <table class={"users"}>
                     <tr>
-                        <th>Name:</th>
+                        <th>Nombre:</th>
                         <td>Pepito P</td>
                     </tr>
                     <tr>
@@ -52,23 +52,42 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <th>Admin:</th>
-                        <td>Yes</td>
+                        <th>Código postal:</th>
+                        <td>28006</td>
                     </tr>
-
                     <tr>
-                        <th>Update password:</th>
-                        <td>
-                            <form action={'/update_password'} method={"post"}>
-                                <input name={"updatePassword"} type={"password"} className={"styledInput"}/>
-                                <button id="newButton" action="submit">Submit</button>
-                            </form>
-                        </td>
+                        <th>Nombre del negocio:</th>
+                        <td>Restaurante Casa Jardín</td>
                     </tr>
+                    <tr>
+                        <th>Categoría:</th>
+                        <td>
+                            <select>
+                                <option value="Restaurante">Restaurante</option>
+                                <option value="Tienda de ropa">Tienda de ropa</option>
+                                <option value="Ultramarinos">Ultramarinos</option>
+                            </select>
 
+                        </td>
 
+                    </tr>
                 </table>
+                <strong>Update password:</strong>
 
+                <form action="" method="post">
+                    <input type="password" class="styledInput"/>
+                    <br>
+                    <button id="newButton" action="submit">Submit</button>
+                </form>
+
+                <br>
+                <strong>Solicitud de cambio de datos de negocio:</strong>
+
+                <form action="" method="post">
+                    <textarea type="password" class="styledInput"></textarea>
+                    <br>
+                    <button id="newButton" action="submit">Submit</button>
+                </form>
 
 
             </div>
