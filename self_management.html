@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
-    <!--rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( ".datepicker" ).datepicker({
+          changeMonth: true,
+          changeYear: true
+        });
+      } );
+    </script>
 
     <link rel="stylesheet" href="css/style.css"/>
 
@@ -20,12 +32,13 @@
 
     <div id="headerWrapper">
         <div id="title">
-            <a href="">iNube</a>
+            <a href="index.html">iNube</a>
         </div>
 
         <div id="navBar">
-            <div class="navBarItem"><a href="">Enlace1</a></div>
-            <div class="navBarItem"><a href="">Enlace2</a></div>
+            <div class="navBarItem"><a href="index.html">Mis datos</a></div>
+            <div class="navBarItem"><a href="comparativa.html">Comparativa</a></div>
+            <div class="navBarItem"><a href="self_management.html">Gestión de Perfil</a></div>
         </div>
     </div>
 
@@ -38,61 +51,139 @@
 
                 <span class="newTitle">Gestión de la información personal</span>
 
-                <table class={"users"}>
+                <table class="users">
                     <tr>
-                        <th>Nombre:</th>
-                        <td>Pepito P</td>
-                    </tr>
-                    <tr>
-                        <th>Username:</th>
-                        <td>pp</td>
+                        <th>Nombre del negocio:</th>
+                        <td>Restaurante Casa Jardín</td>
                     </tr>
                     <tr>
                         <th>ID:</th>
                         <td>1</td>
                     </tr>
                     <tr>
+                        <th>Dirección:</th>
+                        <td>Calle Falsa 123</td>
+                    </tr>
+                    <tr>
                         <th>Código postal:</th>
-                        <td>28006</td>
+                        <td>28004</td>
                     </tr>
                     <tr>
-                        <th>Nombre del negocio:</th>
-                        <td>Restaurante Casa Jardín</td>
+                        <th>CIF:</th>
+                        <td>XXXXXXXXX</td>
                     </tr>
-                    <tr>
-                        <th>Categoría:</th>
-                        <td>
-                            <select>
-                                <option value="Restaurante">Restaurante</option>
-                                <option value="Tienda de ropa">Tienda de ropa</option>
-                                <option value="Ultramarinos">Ultramarinos</option>
-                            </select>
 
-                        </td>
-
-                    </tr>
                 </table>
-                <strong>Update password:</strong>
 
-                <form action="" method="post">
-                    <input type="password" class="styledInput"/>
-                    <br>
-                    <button id="newButton" action="submit">Submit</button>
-                </form>
-
-                <br>
-                <strong>Solicitud de cambio de datos de negocio:</strong>
-
-                <form action="" method="post">
-                    <textarea type="password" class="styledInput"></textarea>
-                    <br>
-                    <button id="newButton" action="submit">Submit</button>
-                </form>
 
 
             </div>
         </div>
 
+        <div id="sideWrapper">
+
+
+
+            <span class="newTitle">Filtro</span>
+
+
+            <table class="filter">
+                <tr>
+                    <th>Fecha inicial:</th>
+                    <td><input type="text" class="datepicker"></td>
+                </tr>
+                <tr>
+                    <th>Fecha final:</th>
+                    <td><input type="text" class="datepicker"></td>
+                </tr>
+                <tr>
+                    <th>Hora inicial:</th>
+                    <td>
+                        <select>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Hora inicial:</th>
+                    <td>
+                        <select>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th> <button id="newButton" action="submit">Filtrar</button></th>
+                </tr>
+
+
+            </table>
+
+
+            <span class="newTitle">Sesión</span>
+
+            <div id="myselfContact">
+
+
+
+                <span id="contactName">Restaurante 1</span>
+                <div id="contactStatus">
+
+                    <a href="" id="logout"><i class="material-icons">power_settings_new</i></a>
+                </div>
+            </div>
+
+
+        </div>
 
     </div>
 
