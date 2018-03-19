@@ -62,7 +62,7 @@ div.topGraphs {
 }
 
 
-div#productosCompetencia {
+div#ocupacionPostal {
     display: inline-block;
     width: 45%;
     height: 300px;
@@ -76,7 +76,7 @@ div#ocupacionCompetencia {
 }
 div#ingresosCompetencia {
     display: inline-block;
-    width: 45%;
+    width: 100%;
     height: 300px;
 
 }
