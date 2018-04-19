@@ -18,6 +18,9 @@ public class Transaction implements Serializable {
     @ManyToOne
     private Client client;
 
+	@ManyToOne
+    private Merchant merchant;
+
 
     public Transaction() {
 
@@ -61,4 +64,12 @@ public class Transaction implements Serializable {
     public void setClient(Client client) {
         this.client = client;
     }
+    
+    public Merchant getMerchant() {
+		return merchant;
+	}
+
+	public void setMerchant(Merchant merchant) {
+		this.merchant = merchant;
+	}
 }

@@ -16,6 +16,11 @@ public class IndexServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
+    	if(request.getSession().getAttribute("merchant") == null) {
+    		response.sendRedirect(request.getContextPath() + "/login.jsp");
+    		return;
+    	}
+    	
     	
     	String graficaIngresosDatos = "";
     	String graficaOcupacionDatos = "";
