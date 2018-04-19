@@ -44,6 +44,12 @@
 
 
 	</div>
-	
+
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script>
+		<%@ include file="graficas/graficaOcupacion.jsp"%>
+		<%@ include file="graficas/graficaIngresos.jsp"%>
+	</script>
 </body>
 </html>

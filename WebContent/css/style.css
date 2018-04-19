@@ -89,7 +89,7 @@ div#productos {
 
 div#ocupacion {
     display: inline-block;
-    width: 45%;
+    width: 100%;
     height: 300px;
     margin-left: 15px;
 }

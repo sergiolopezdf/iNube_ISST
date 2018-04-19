@@ -5,7 +5,6 @@
 
 		<div class="topGraphs">
 
-			<div id="productos"></div>
 			<div id="ocupacion"></div>
 
 		</div>
