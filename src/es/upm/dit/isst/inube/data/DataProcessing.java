@@ -1,10 +1,7 @@
 package es.upm.dit.isst.inube.data;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStream;
-import java.io.StringReader;
 
 import javax.json.*;
 
@@ -18,7 +15,7 @@ import es.upm.dit.isst.inube.dao.model.Transaction;
 public class DataProcessing {
 	
 	private final String merchantId = "MerchantID";
-	private final String clientId = "MerchantID";
+	private final String clientId = "ClientID";
 	private final String id = "Id";
 	private final String importe = "Import";
 	
@@ -54,9 +51,7 @@ public class DataProcessing {
 
 
 	public void processNewJSON() {
-		
-		String data = "";
-		
+			
 		
 		try {
 			
@@ -118,8 +113,7 @@ public class DataProcessing {
 		
 	}
 	
-	
-	
+
 	public static void main(String[] args) {
 		DataProcessing dp = new DataProcessing("src/es/upm/dit/isst/inube/json/data1.json");
 		dp.processNewJSON();
