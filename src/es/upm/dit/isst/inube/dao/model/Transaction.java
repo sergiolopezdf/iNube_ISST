@@ -13,7 +13,7 @@ public class Transaction implements Serializable {
     private int transactionId;
 
     private float importe;
-    private Date fecha;
+    private String fecha;
 
     @ManyToOne
     private Client client;
@@ -46,12 +46,12 @@ public class Transaction implements Serializable {
         this.importe = importe;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
 
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
 
         this.fecha = fecha;
     }

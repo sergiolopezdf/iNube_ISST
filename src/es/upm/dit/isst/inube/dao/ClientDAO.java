@@ -12,7 +12,7 @@ public interface ClientDAO {
     //CRUD
     public void createClient(Client client);
 
-    public Client readClient(String clientId);
+    public Client readClient(int clientId);
 
     public void updateClient(Client client);
 

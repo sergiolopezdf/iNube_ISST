@@ -8,6 +8,13 @@ import java.io.StringReader;
 
 import javax.json.*;
 
+import es.upm.dit.isst.inube.dao.ClientDAOImplementation;
+import es.upm.dit.isst.inube.dao.MerchantDAOImplementation;
+import es.upm.dit.isst.inube.dao.TransactionDAOImplementation;
+import es.upm.dit.isst.inube.dao.model.Client;
+import es.upm.dit.isst.inube.dao.model.Merchant;
+import es.upm.dit.isst.inube.dao.model.Transaction;
+
 public class DataProcessing {
 	
 	private final String merchantId = "MerchantID";
@@ -73,7 +80,41 @@ public class DataProcessing {
 	
 	public void storeDataFromJSON(String randomDay) {
 		
-		
+		for(JsonValue tValue : this.dataFromJson) {
+			
+			JsonObject transactionJson = (JsonObject) tValue;
+			
+			int clientId = Integer.parseInt(transactionJson.get(this.clientId).toString());
+			String merchantId = transactionJson.get(this.merchantId).toString();
+			
+			Merchant merchant = MerchantDAOImplementation.getInstance().readMerchand(merchantId);
+			Client client = ClientDAOImplementation.getInstance().readClient(clientId);
+			
+			if(merchant == null) {
+				return;
+			}
+			
+			if(client == null) {
+				client = new Client();
+				client.setClientId(clientId);
+				client.setCodigoPostal(00000);
+				ClientDAOImplementation.getInstance().createClient(client);
+			}
+			
+			Float importe = Float.parseFloat(transactionJson.get(this.importe).toString());
+			int transactionId = Integer.parseInt(transactionJson.get(this.id).toString());
+			
+			Transaction t = new Transaction();
+			t.setFecha(randomDay);
+			t.setImporte(importe);
+			t.setTransactionId(transactionId);
+			t.setClient(client);
+			t.setMerchant(merchant);
+			
+			TransactionDAOImplementation.getInstance().createTransaction(t);
+						
+		}
+
 		
 	}
 	
@@ -82,6 +123,7 @@ public class DataProcessing {
 	public static void main(String[] args) {
 		DataProcessing dp = new DataProcessing("src/es/upm/dit/isst/inube/json/data1.json");
 		dp.processNewJSON();
+		dp.storeDataFromJSON("1");
 
 	}
 

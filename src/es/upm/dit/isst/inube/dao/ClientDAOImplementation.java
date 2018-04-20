@@ -55,7 +55,7 @@ public class ClientDAOImplementation implements ClientDAO {
     }
 
     @Override
-    public Client readClient(String clientId) {
+    public Client readClient(int clientId) {
         Session session = SessionFactoryService.get().openSession();
 
         Client client = null;

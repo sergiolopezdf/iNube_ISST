@@ -2,6 +2,7 @@ package es.upm.dit.isst.inube.servlets;
 
 import es.upm.dit.isst.inube.dao.MerchantDAOImplementation;
 import es.upm.dit.isst.inube.dao.model.Merchant;
+import es.upm.dit.isst.inube.data.DataProcessing;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 
         if(merchant != null) {
         	request.getSession().setAttribute("merchant", merchant);
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
+        	response.sendRedirect(request.getContextPath() + "/index.jsp");
             
         } else {
         	request.getSession().setAttribute("alertNotOk", "Merchant ID incorrecto");
