@@ -26,7 +26,7 @@ public class ClientDAOImplementation implements ClientDAO {
 
         try {
             session.beginTransaction();
-            transactions.addAll(session.createQuery("from Transaction ").list());
+            transactions.addAll(session.createQuery("from Transaction").list());
             session.getTransaction().commit();
         } catch (Exception e) {
             // manejar excepciones

@@ -14,6 +14,7 @@ public class Transaction implements Serializable {
 
     private float importe;
     private String fecha;
+    private String hora;
 
     @ManyToOne
     private Client client;
@@ -72,4 +73,15 @@ public class Transaction implements Serializable {
 	public void setMerchant(Merchant merchant) {
 		this.merchant = merchant;
 	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+	
+	
+	
 }

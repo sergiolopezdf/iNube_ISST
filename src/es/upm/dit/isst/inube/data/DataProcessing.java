@@ -17,6 +17,7 @@ public class DataProcessing {
 	private final String merchantId = "MerchantID";
 	private final String clientId = "ClientID";
 	private final String id = "Id";
+	private final String hora = "Time";
 	private final String importe = "Import";
 	
 	private JsonArray dataFromJson;
@@ -81,6 +82,7 @@ public class DataProcessing {
 			
 			int clientId = Integer.parseInt(transactionJson.get(this.clientId).toString());
 			String merchantId = transactionJson.get(this.merchantId).toString();
+			String hora = transactionJson.get(this.hora).toString();
 			
 			Merchant merchant = MerchantDAOImplementation.getInstance().readMerchand(merchantId);
 			Client client = ClientDAOImplementation.getInstance().readClient(clientId);
@@ -105,6 +107,7 @@ public class DataProcessing {
 			t.setTransactionId(transactionId);
 			t.setClient(client);
 			t.setMerchant(merchant);
+			t.setHora(hora);
 			
 			TransactionDAOImplementation.getInstance().createTransaction(t);
 						

@@ -1,10 +1,13 @@
 package es.upm.dit.isst.inube.dao;
 
-import es.upm.dit.isst.inube.dao.model.Transaction;
-import org.hibernate.Session;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.query.Query;
+
+import es.upm.dit.isst.inube.dao.model.Merchant;
+import es.upm.dit.isst.inube.dao.model.Transaction;
 
 public class TransactionDAOImplementation implements TransactionDAO {
     private static TransactionDAOImplementation ourInstance = new TransactionDAOImplementation();
@@ -105,8 +108,27 @@ public class TransactionDAOImplementation implements TransactionDAO {
     }
 
     @Override
-    public List<Transaction> readAllTransactionsFromClient(int clientId) {
-        return null;
+    public List<Transaction> readAllTransactionsFromMerchant(Merchant merchant) {
+    	
+    	 Session session = SessionFactoryService.get().openSession();
+         List<Transaction> transactions = new ArrayList<>();
+         
+         try {
+ 			session.beginTransaction();
+ 			List res = session.createQuery("FROM Transaction T WHERE T.merchant = :m ORDER BY T.hora DESC").setParameter("m", merchant).list();
+ 	
+ 			transactions.addAll(res); 				
+					
+			session.getTransaction().commit();
+			
+ 		} catch (Exception e) {
+ 			// manejar excepciones
+ 		} finally {
+ 			session.close();
+ 		}
+         
+         
+         return transactions;
     }
 
     @Override
