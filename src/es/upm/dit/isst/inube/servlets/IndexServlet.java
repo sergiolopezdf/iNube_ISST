@@ -27,6 +27,19 @@ public class IndexServlet extends HttpServlet {
     	Merchant merchant = (Merchant) request.getSession().getAttribute("merchant");
     	
     	List<Transaction> transactions = TransactionDAOImplementation.getInstance().readAllTransactionsFromMerchant(merchant);
+    	
+    	String horaInicial = (String) request.getSession().getAttribute("horaInicial");
+    	String horaFinal = (String) request.getSession().getAttribute("horaFinal");
+    	
+    	int horaInicialInt = 0;
+    	int horaFinalInt = 23;
+    	
+    	if (horaFinal != null && horaInicial != null) {
+    		horaInicialInt = Integer.parseInt(horaInicial);
+        	horaFinalInt = Integer.parseInt(horaFinal);
+    	}
+    	
+    	
    
     	float[] importes = new float[24];
     	float[] ocupacion = new float[24];
@@ -40,7 +53,7 @@ public class IndexServlet extends HttpServlet {
     	String graficaIngresosDatos = "";
     	String graficaOcupacionDatos = "";
     	
-    	for(int i = 0; i < 24; i++) {
+    	for(int i = horaInicialInt; i <= horaFinalInt; i++) {
     		graficaIngresosDatos += " { label: \"" + i + "h\", y:" + importes[i] + " }," ;
     		graficaOcupacionDatos += " { label: \"" + i + "h\", y:" + ocupacion[i] + " }," ;
     	}

@@ -115,7 +115,7 @@ public class TransactionDAOImplementation implements TransactionDAO {
          
          try {
  			session.beginTransaction();
- 			List res = session.createQuery("FROM Transaction T WHERE T.merchant = :m ORDER BY T.hora DESC").setParameter("m", merchant).list();
+ 			List res = session.createQuery("FROM Transaction T WHERE T.merchant = :m ").setParameter("m", merchant).list();
  	
  			transactions.addAll(res); 				
 					
