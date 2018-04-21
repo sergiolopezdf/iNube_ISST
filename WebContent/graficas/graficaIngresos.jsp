@@ -6,7 +6,7 @@ var ingresos = new CanvasJS.Chart("ingresos", {
     fontFamily: 'Catamaran',
   },
   axisY: {
-    title: "Ingresos (€)",
+    title: "Ingresos (euros)",
     fontFamily: 'Catamaran',
   },
   data: [{

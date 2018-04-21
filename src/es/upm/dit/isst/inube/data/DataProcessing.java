@@ -104,7 +104,10 @@ public class DataProcessing {
 			Transaction t = new Transaction();
 			t.setFecha(randomDay);
 			t.setImporte(importe);
-			t.setTransactionId(transactionId);
+			
+			int tId = (75*(Integer.parseInt(randomDay)-1)) + transactionId;
+			
+			t.setTransactionId(tId);
 			t.setClient(client);
 			t.setMerchant(merchant);
 			t.setHora(hora);
@@ -118,9 +121,9 @@ public class DataProcessing {
 	
 
 	public static void main(String[] args) {
-		DataProcessing dp = new DataProcessing("src/es/upm/dit/isst/inube/json/data1.json");
+		DataProcessing dp = new DataProcessing("src/es/upm/dit/isst/inube/json/data7.json");
 		dp.processNewJSON();
-		dp.storeDataFromJSON("1");
+		dp.storeDataFromJSON("7");
 
 	}
 

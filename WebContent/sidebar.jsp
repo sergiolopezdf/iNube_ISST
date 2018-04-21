@@ -9,13 +9,10 @@
 
 		<table class="filter">
 			<tr>
-				<th>Fecha inicial:</th>
-				<td><input type="text" class="datepicker" name="fechaInicial"></td>
+				<th>Fecha:</th>
+				<td><input type="text" class="datepicker" name="fecha"></td>
 			</tr>
-			<tr>
-				<th>Fecha final:</th>
-				<td><input type="text" class="datepicker" name="fechaFinal"></td>
-			</tr>
+			
 			<tr>
 				<th>Hora inicial:</th>
 				<td><select name="horaInicial">
@@ -93,7 +90,7 @@
 
 
 
-			<span id="contactName">Restaurante 1</span>
+			<span id="contactName">${merchant.nombreNegocio}</span>
 			<div id="contactStatus">
 
 				<a href="" id="logout"><i class="material-icons">power_settings_new</i></a>

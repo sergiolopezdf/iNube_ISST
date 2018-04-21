@@ -40,14 +40,26 @@ public class IndexServlet extends HttpServlet {
     	}
     	
     	
+    	String fechaInicial = (String) request.getSession().getAttribute("fecha");
+    	
+    	int c1 = Character.getNumericValue(fechaInicial.charAt(3));
+    	int c2 = Character.getNumericValue(fechaInicial.charAt(4));
+    	
+    	
+    	String dateToPick = Integer.toString((c1 + c2) % 7);
+    
    
     	float[] importes = new float[24];
     	float[] ocupacion = new float[24];
     	
     	for(Transaction t: transactions) {
-    		int hora = Integer.parseInt(t.getHora());
-    		importes[hora] += t.getImporte();
-    		ocupacion[hora]++;
+    		if(t.getFecha() == dateToPick) {
+    			int hora = Integer.parseInt(t.getHora());
+        		importes[hora] += t.getImporte();
+        		ocupacion[hora]++;
+    		}
+    		
+    		
     	}
     	
     	String graficaIngresosDatos = "";

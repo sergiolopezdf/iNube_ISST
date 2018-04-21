@@ -17,14 +17,12 @@ public class FilterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	
-    	String fechaInicial = request.getParameter("fechaInicial");
-    	String fechaFinal = request.getParameter("fechaFinal");
+    	String fecha = request.getParameter("fecha");
     	
     	String horaInicial = request.getParameter("horaInicial");
     	String horaFinal = request.getParameter("horaFinal");
     	
-    	request.getSession().setAttribute("fechaInicial", fechaInicial);
-    	request.getSession().setAttribute("fechaFinal", fechaFinal);
+    	request.getSession().setAttribute("fecha", fecha);
     	request.getSession().setAttribute("horaInicial", horaInicial);
     	request.getSession().setAttribute("horaFinal", horaFinal);
     	
