@@ -40,20 +40,20 @@ public class IndexServlet extends HttpServlet {
     	}
     	
     	
-    	String fechaInicial = (String) request.getSession().getAttribute("fecha");
+    	String fecha = (String) request.getSession().getAttribute("fecha");
     	
-    	int c1 = Character.getNumericValue(fechaInicial.charAt(3));
-    	int c2 = Character.getNumericValue(fechaInicial.charAt(4));
+    	int c1 = Character.getNumericValue(fecha.charAt(3));
+    	int c2 = Character.getNumericValue(fecha.charAt(4));
     	
     	
-    	String dateToPick = Integer.toString((c1 + c2) % 7);
+    	String dateToPick = Integer.toString(((c1 + c2) % 7) +1);
     
    
     	float[] importes = new float[24];
     	float[] ocupacion = new float[24];
     	
     	for(Transaction t: transactions) {
-    		if(t.getFecha() == dateToPick) {
+    		if(t.getFecha().equals(dateToPick)) {
     			int hora = Integer.parseInt(t.getHora());
         		importes[hora] += t.getImporte();
         		ocupacion[hora]++;
