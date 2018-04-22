@@ -81,14 +81,8 @@ div#ingresosCompetencia {
 
 }
 
-div#productos {
-    display: inline-block;
-    width: 45%;
-    height: 300px;
-}
 
 div#ocupacion {
-    display: inline-block;
     width: 100%;
     height: 300px;
     margin-left: 15px;
