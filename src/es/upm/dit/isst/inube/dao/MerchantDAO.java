@@ -1,5 +1,7 @@
 package es.upm.dit.isst.inube.dao;
 
+import java.util.List;
+
 import es.upm.dit.isst.inube.dao.model.Merchant;
 
 public interface MerchantDAO {
@@ -14,4 +16,6 @@ public interface MerchantDAO {
     public void updateMerchant(Merchant merchant);
 
     public void deleteMerchant(Merchant merchant);
+    
+    public int getNumberOfMerchants();
 }

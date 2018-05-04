@@ -1,6 +1,10 @@
 package es.upm.dit.isst.inube.dao;
 
 import es.upm.dit.isst.inube.dao.model.Merchant;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 
 public class MerchantDAOImplementation implements MerchantDAO {
@@ -101,6 +105,34 @@ public class MerchantDAOImplementation implements MerchantDAO {
         }
 
     }
+
+	@Override
+	public int getNumberOfMerchants() {
+		Session session = SessionFactoryService.get().openSession();
+		int nMerchant = 0;
+		
+		List<Long> nm = new ArrayList<>();
+		
+        try {
+            session.beginTransaction();
+         
+            
+            nm  = session.createQuery("SELECT COUNT(*) FROM Merchant").list();
+          
+          
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            // manejar excepciones
+        } finally {
+            session.close();
+        }
+        
+        System.out.println(nm.get(0));
+        
+        nMerchant = nm.get(0).intValue();
+        
+        return nMerchant;
+	}
 }
 
 

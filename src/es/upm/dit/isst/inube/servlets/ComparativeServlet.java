@@ -60,13 +60,19 @@ public class ComparativeServlet extends HttpServlet {
     			
     	}
     	
+    	
+    	
+    	int nMerchant = MerchantDAOImplementation.getInstance().getNumberOfMerchants();
+    	
+    	
+    	
     	for(int i = 0; i<importes.length; i++) {
-    		importes[i] /= 5;
+    		importes[i] /= (nMerchant-1);
     	}
     	
     	
     	for(int i = 0; i<ocupacion.length; i++) {
-    		ocupacion[i] /= 5;
+    		ocupacion[i] /= (nMerchant-1);
     	}
     	
     	
