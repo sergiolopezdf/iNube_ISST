@@ -5,7 +5,7 @@ var ocupacionCompetencia = new CanvasJS.Chart('ocupacionCompetencia', {
     fontFamily: 'Catamaran',
   },
   axisY: {
-    title: 'Ocupación %',
+    title: 'Ocupación (número de transacciones)',
     titleFontColor: 'black',
     lineColor: 'black',
     labelFontColor: 'black',
@@ -21,20 +21,11 @@ var ocupacionCompetencia = new CanvasJS.Chart('ocupacionCompetencia', {
   data: [
     {
       type: 'column',
-      name: 'Tu Restaurante',
-      legendText: 'Tu Restaurante',
+      name: 'Nº medio de personas en los restaurantes de la zona',
+      legendText: 'Nº medio de personas',
       showInLegend: true,
       dataPoints: [
         ${dataOcupacionCompetencia}
-      ],
-    },
-    {
-      type: 'column',
-      name: 'Compentencia',
-      legendText: 'Competencia',
-      showInLegend: true,
-      dataPoints: [
-      
       ],
     }],
 });

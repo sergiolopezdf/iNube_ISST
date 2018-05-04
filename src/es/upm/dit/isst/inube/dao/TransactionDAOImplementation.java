@@ -89,19 +89,21 @@ public class TransactionDAOImplementation implements TransactionDAO {
     }
 
     @Override
-    public List<Transaction> readAllTransactions() {
+    public List<Transaction> readAllTransactionsFromCompetencia(Merchant merchant) {
         Session session = SessionFactoryService.get().openSession();
         List<Transaction> transactions = new ArrayList<>();
 
-     /*   try {
+        try {
             session.beginTransaction();
             //transactions.addAll(session.createQuery("from Transaction ").list());
+            List res = session.createQuery("FROM Transaction T WHERE T.merchant != :m ").setParameter("m", merchant).list();
+            transactions.addAll(res); 	
             session.getTransaction().commit();
         } catch (Exception e) {
             // manejar excepciones
         } finally {
             session.close();
-        }*/
+        }
 
 
         return transactions;

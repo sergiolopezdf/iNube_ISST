@@ -5,7 +5,7 @@ var ingresosCompetencia = new CanvasJS.Chart('ingresosCompetencia', {
     fontFamily: 'Catamaran',
   },
   axisY: {
-    title: 'Ingresos €',
+    title: 'Ingresos (euros)',
     titleFontColor: 'black',
     lineColor: 'black',
     labelFontColor: 'black',
@@ -21,22 +21,13 @@ var ingresosCompetencia = new CanvasJS.Chart('ingresosCompetencia', {
   data: [
     {
       type: 'column',
-      name: 'Tu Restaurante',
-      legendText: 'Tu Restaurante',
+      name: 'Comparativa con el resto de restaurantes de la zona',
+      legendText: 'Ingresos medios de la competencia',
       showInLegend: true,
       dataPoints: [
         
         ${dataIngresosCompetencia}
         
-      ],
-    },
-    {
-      type: 'column',
-      name: 'Compentencia',
-      legendText: 'Competencia',
-      showInLegend: true,
-      dataPoints: [
-       
       ],
     }],
 });

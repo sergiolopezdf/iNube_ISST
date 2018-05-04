@@ -6,7 +6,7 @@ var ocupacion = new CanvasJS.Chart("ocupacion", {
     fontFamily: 'Catamaran',
   },
   axisY: {
-    title: "Ocupacion (Número de transacciones	)"
+    title: "Ocupacion (número de transacciones)"
   },
   data: [{
     type: "column",

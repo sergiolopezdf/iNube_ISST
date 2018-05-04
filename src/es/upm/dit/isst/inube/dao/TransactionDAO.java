@@ -17,7 +17,7 @@ public interface TransactionDAO {
     public void deleteTransaction(Transaction transaction);
 
 
-    public List<Transaction> readAllTransactions();
+    public List<Transaction> readAllTransactionsFromCompetencia(Merchant merchant);
 
     public List<Transaction> readAllTransactionsFromMerchant(Merchant merchant);
 
