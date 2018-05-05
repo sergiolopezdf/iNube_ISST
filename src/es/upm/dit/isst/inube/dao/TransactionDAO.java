@@ -21,6 +21,6 @@ public interface TransactionDAO {
 
     public List<Transaction> readAllTransactionsFromMerchant(Merchant merchant);
 
-    public List<Transaction> readAllTransactionsFromZone(int codigoPostal);
+    public List<Long> readAllTransactionsFromZones();
 
 }

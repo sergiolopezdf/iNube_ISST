@@ -134,7 +134,7 @@ public class TransactionDAOImplementation implements TransactionDAO {
     }
 
     @Override
-    public List<Transaction> readAllTransactionsFromZone(int codigoPostal) {
-        return null;
+    public List<Long> readAllTransactionsFromZones() {
+    	return null;
     }
 }

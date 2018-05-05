@@ -60,9 +60,10 @@ public class ComparativeServlet extends HttpServlet {
     			
     	}
     	
-    	
-    	
+    
     	int nMerchant = MerchantDAOImplementation.getInstance().getNumberOfMerchants();
+    	
+    	TransactionDAOImplementation.getInstance().readAllTransactionsFromZones();
     	
     	
     	

@@ -4,8 +4,6 @@
 
 
 		<div class="topGraphs">
-
-			<div id="ocupacionPostal"></div>
 			<div id="ocupacionCompetencia"></div>
 
 		</div>
