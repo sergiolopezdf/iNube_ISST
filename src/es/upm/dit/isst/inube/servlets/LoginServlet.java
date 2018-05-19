@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 
         if(merchant != null) {
         	request.getSession().setAttribute("merchant", merchant);
-        	response.sendRedirect(request.getContextPath() + "/index.jsp");
+        	response.sendRedirect(request.getContextPath() + "/main.jsp");
             
         } else {
         	request.getSession().setAttribute("alertNotOk", "Merchant ID incorrecto");

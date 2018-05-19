@@ -26,7 +26,7 @@ public class FilterServlet extends HttpServlet {
     	request.getSession().setAttribute("horaInicial", horaInicial);
     	request.getSession().setAttribute("horaFinal", horaFinal);
     	
-    	response.sendRedirect(request.getContextPath() + "/index");
+    	response.sendRedirect(request.getContextPath() + "/main");
     	
 
 

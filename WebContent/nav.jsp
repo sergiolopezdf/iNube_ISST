@@ -1,12 +1,12 @@
 
 <div id="headerWrapper">
 	<div id="title">
-		<a href="index">iNube</a>
+		<a href="main">iNube</a>
 	</div>
 
 	<div id="navBar">
 		<div class="navBarItem">
-			<a href="index">Mis datos</a>
+			<a href="main">Mis datos</a>
 		</div>
 		<div class="navBarItem">
 			<a href="comparative">Comparativa</a>
