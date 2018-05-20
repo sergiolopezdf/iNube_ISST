@@ -56,7 +56,7 @@ public class MerchantDAOImplementation implements MerchantDAO {
     }
 
     @Override
-    public Merchant readMerchand(String merchantId) {
+    public Merchant readMerchant(String merchantId) {
         Session session = SessionFactoryService.get().openSession();
 
         Merchant merchant = null;

@@ -11,7 +11,7 @@ public interface MerchantDAO {
     //CRUD
     public void createMerchant(Merchant merchant);
 
-    public Merchant readMerchand(String merchantId);
+    public Merchant readMerchant(String merchantId);
 
     public void updateMerchant(Merchant merchant);
 

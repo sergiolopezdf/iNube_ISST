@@ -84,7 +84,7 @@ public class DataProcessing {
 			String merchantId = transactionJson.get(this.merchantId).toString();
 			String hora = transactionJson.get(this.hora).toString();
 			
-			Merchant merchant = MerchantDAOImplementation.getInstance().readMerchand(merchantId);
+			Merchant merchant = MerchantDAOImplementation.getInstance().readMerchant(merchantId);
 			Client client = ClientDAOImplementation.getInstance().readClient(clientId);
 			
 			if(merchant == null) {
